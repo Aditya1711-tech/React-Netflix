@@ -3,10 +3,10 @@
   height: 100vh;
   background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 100%
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.9) 100%
     ),
-    url("http://authors.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg");
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/f1c3c4eb-2fea-42c7-9ebd-1c093bd8a69d/9c9af369-7a8c-4c8f-8e4a-d6c9d655f713/IN-en-20230403-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   background-size: cover;
   position: relative;
 
@@ -19,6 +19,7 @@
 
       .logo {
         height: 40px;
+        margin-left: 130px;
       }
 
       .loginButton {
@@ -30,6 +31,7 @@
         font-size: 16px;
         font-weight: 500;
         cursor: pointer;
+        margin-right: 130px;
       }
     }
   }
@@ -59,8 +61,8 @@
     }
 
     .input {
-      width: 50%;
-      background-color: white;
+      width: 40%;
+      background-color: transparent;
       display: flex;
       align-items: center;
       justify-content: space-between;

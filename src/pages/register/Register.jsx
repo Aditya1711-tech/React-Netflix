@@ -49,7 +49,7 @@ function Register() {
         </p>
         {!email ? (
           <div className="input">
-            <input type="email" placeholder="email address" ref={emailRef} />
+            <input type="email" placeholder="Email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
               Get started
             </button>
@@ -58,7 +58,7 @@ function Register() {
           <form className="input">
             <input
               type={dynamicType}
-              placeholder="password"
+              placeholder="Password"
               ref={passwordRef}
             />
             <FontAwesomeIcon icon={eye} className="icon" onClick={iconChange} />
