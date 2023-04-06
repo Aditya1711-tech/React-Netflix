@@ -33,10 +33,10 @@
     }
     .container {
       margin-left: 50px;
-      width: max-content;
-      margin: 10px;
       display: flex;
-      transform: translate(0px);
+      margin-top: 10px;
+      width: max-content;
+      transform: translateX(0px);
       transition: all 1s ease;
     }
   }

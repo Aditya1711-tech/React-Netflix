@@ -13,14 +13,17 @@ function List() {
 
   const handleClick = (direction) => {
     setIsMoved(true);
-    let distance = listRef.current.getBoundingClientRect().x;
+    let distance = listRef.current.getBoundingClientRect().x - 50;
     if (direction === "left" && slideNumber > 0) {
       setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = `translateX(${230 + distance}px)`;
+      listRef.current.style.transform = `translateX(${260 + distance}px)`;
     }
     if (direction === "right" && slideNumber < 5) {
+      //   if (slideNumber == 4) {
+      //     setIsMoved(false);
+      //   }
       setSlideNumber(slideNumber + 1);
-      listRef.current.style.transform = `translateX(${-230 + distance}px)`;
+      listRef.current.style.transform = `translateX(${-260 + distance}px)`;
     }
   };
   return (
@@ -34,16 +37,27 @@ function List() {
           style={{ display: !isMoved && "none" }}
         />
         <div className="container" ref={listRef}>
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
-          <Listitem />
+          <Listitem index={0} />
+          <Listitem index={1} />
+          <Listitem index={2} />
+          <Listitem index={3} />
+          <Listitem index={4} />
+          <Listitem index={5} />
+          <Listitem index={6} />
+          <Listitem index={7} />
+          <Listitem index={8} />
+          <Listitem index={9} />
+
+          {/* <Listitem index={1} />
+          <Listitem index={2} />
+          <Listitem index={3} />
+          <Listitem index={4} />
+          <Listitem index={5} />
+          <Listitem index={6} />
+          <Listitem index={7} />
+          <Listitem index={8} />
+          <Listitem index={9} />
+          <Listitem index={10} /> */}
         </div>
         <FontAwesomeIcon
           icon={faChevronRight}
