@@ -1,8 +1,11 @@
-import { useRef } from "react";
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./register.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-export default function Register() {
+function Register() {
+  const [dynamicType, setDynamicType] = useState("password");
+  const [eye, setEye] = useState(faEye);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,9 +15,20 @@ export default function Register() {
   const handleStart = () => {
     setEmail(emailRef.current.value);
   };
-  const handleFinish = () => {
+  const handleEnd = () => {
     setPassword(passwordRef.current.value);
   };
+
+  const iconChange = () => {
+    if (eye === faEye) {
+      setEye(faEyeSlash);
+      setDynamicType("input");
+    } else {
+      setEye(faEye);
+      setDynamicType("password");
+    }
+  };
+
   return (
     <div className="register">
       <div className="top">
@@ -37,13 +51,18 @@ export default function Register() {
           <div className="input">
             <input type="email" placeholder="email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
-              Get Started
+              Get started
             </button>
           </div>
         ) : (
           <form className="input">
-            <input type="password" placeholder="password" ref={passwordRef} />
-            <button className="registerButton" onClick={handleFinish}>
+            <input
+              type={dynamicType}
+              placeholder="password"
+              ref={passwordRef}
+            />
+            <FontAwesomeIcon icon={eye} className="icon" onClick={iconChange} />
+            <button className="registerButton" onClick={handleEnd}>
               Start
             </button>
           </form>
@@ -52,3 +71,5 @@ export default function Register() {
     </div>
   );
 }
+
+export default Register;
