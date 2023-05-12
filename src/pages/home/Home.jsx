@@ -6,11 +6,11 @@ import "./home.scss";
 import List from "../../components/list/List";
 import React from "react";
 
-const Home = () => {
+const Home = ({ type }) => {
   return (
     <div className="home">
       <Navbar />
-      <Featured />
+      <Featured type={type} />
       <List />
       <List />
       <List />
