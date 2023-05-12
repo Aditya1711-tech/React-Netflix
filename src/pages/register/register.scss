@@ -65,7 +65,7 @@
       background-color: transparent;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       margin-top: 20px;
       height: 50px;
       border-radius: 5px;
@@ -77,12 +77,13 @@
         padding: 0 10px;
       }
       .icon {
-        flex: 1;
+        margin-left: 150px;
+        position: absolute;
         color: black;
         cursor: pointer;
       }
       .registerButton {
-        flex: 3;
+        flex: 4;
         height: 100%;
         background-color: red;
         border: none;
